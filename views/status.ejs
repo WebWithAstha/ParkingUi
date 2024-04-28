@@ -1,0 +1,42 @@
+<% include ./partials/header.ejs %>
+  
+<div class="w-full bg-zinc-300 p-2 flex items-center ">
+
+  <a href="javascript:history.back()" class="flex items-center font-semibold"><i class="ri-arrow-left-s-line text-2xl mr-2 font-bold"></i>back</a>
+</div>
+<div class="container px-4 py-4">
+  <!-- Heading of the page -->
+  <h1 class="text-3xl font-bold mb-4">Parking Status</h1>
+  <!-- Description of the page -->
+  <div class="wrap flex justify-center w-full mt-16">
+      <div class="timer w-48 h-48 rounded-full bg-zinc-700 flex items-center justify-center">
+          <div class="icon bg-white text-black w-44 h-44 flex items-center justify-center  rounded-full">
+              <i class="ri-roadster-line text-8xl"></i>
+          </div>
+      </div>
+  </div>
+  <h4 class="text-center text-red-500 font-medium mt-4">Time left</h4>
+
+  <h1 class="text-3xl  font-semibold text-center"><span>19</span>:<span>59</span> min</h1>
+  <button class="w-full mt-10 bg-[#fecb34] p-2 text-xl font-medium rounded-md">End parking</button>
+</div>
+  <footer class="bg-[#1792ce] text-white justify-center items-center flex flex-col py-4 gap-2">
+    <h4 class="capitalize font-medium">slots</h4>
+    <h4 class="capitalize font-medium">status</h4>
+    <h4 class="capitalize font-medium">about</h4>
+    <div class="flex items-center justify-center gap-2 mt-2">
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-instagram-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-twitter-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-facebook-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-linkedin-line"></i>
+    </div>
+    <h4>terms & conditions</h4>
+    <p class="mt-2 text-[#08374e]">parkiot 2023 @copyright lorem lorem</p>
+
+
+  </footer>
+  <% include ./partials/footer.ejs %>

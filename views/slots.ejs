@@ -1,0 +1,101 @@
+<% include ./partials/header.ejs %>
+
+  <div class="w-full bg-zinc-300 p-2 flex items-center ">
+
+    <a href="javascript:history.back()" class="flex items-center font-semibold"><i
+        class="ri-arrow-left-s-line text-2xl mr-2 font-bold"></i>back</a>
+  </div>
+  <div class="container mx-auto px-4 py-4">
+
+    <h1 class="text-3xl font-bold mb-4">Parking Availability</h1>
+
+    <p class="text-lg mb-6">Find available parking spots in real-time.</p>
+
+    <div class="mb-6 flex">
+      <div class="w-full flex text-center">
+        <h2 class="text-sm py-2 bg-gray-100 font-semibold mb-2 w-1/2">Zone 1</h2>
+        <h2 class="text-sm py-2 font-semibold mb-2 w-1/2">Zone 2</h2>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class=" rounded-md p-4 shadow-md">
+        <div class="icon bg-zinc-700 text-white aspect-square flex items-center justify-center  rounded-full">
+          <i class="ri-roadster-line text-3xl"></i>
+        </div>
+        <div class="dets text-center">
+          <h3 class="text-md font-semibold mt-2">Slot 1</h3>
+          <h4 class="font-medium text-xs text-green-600 flex justify-center items-center"> <i
+              class="ri-circle-fill text-xs scale-[.5]"></i> Available</h4>
+          <button
+            class="bg-yellow-500 hover:bg-yellow-600 mt-2 text-white font-semibold py-2 px-4 rounded-md w-full">Book
+            Now</button>
+        </div>
+      </div>
+      <div class=" rounded-md p-4 shadow-md">
+        <div class="icon bg-zinc-700 text-white aspect-square flex items-center justify-center  rounded-full">
+          <i class="ri-roadster-line text-3xl"></i>
+        </div>
+        <div class="dets text-center">
+          <h3 class="text-md font-semibold mt-2">Slot 1</h3>
+          <h4 class="font-medium text-xs text-green-600 flex justify-center items-center"> <i
+              class="ri-circle-fill text-xs scale-[.5]"></i> Available</h4>
+
+          <a href="/book/slot/1/1"><button
+            class="bg-yellow-500 hover:bg-yellow-600 mt-2 text-white font-semibold py-2 px-4 rounded-md w-full">Book
+            Now</button></a>
+        </div>
+      </div>
+      <div class=" rounded-md p-4 shadow-md">
+        <div class="icon bg-zinc-700 text-white aspect-square flex items-center justify-center  rounded-full">
+          <i class="ri-roadster-line text-3xl"></i>
+        </div>
+        <div class="dets text-center">
+          <h3 class="text-md font-semibold mt-2">Slot 1</h3>
+          <h4 class="font-medium text-xs text-green-600 flex justify-center items-center"> <i
+              class="ri-circle-fill text-xs scale-[.5]"></i> Available</h4>
+
+          <button
+            class="bg-yellow-500 hover:bg-yellow-600 mt-2 text-white font-semibold py-2 px-4 rounded-md w-full">Book
+            Now</button>
+        </div>
+      </div>
+      <div class=" rounded-md p-4 shadow-md">
+        <div class="icon bg-zinc-700 text-white aspect-square flex items-center justify-center  rounded-full">
+          <i class="ri-roadster-line text-3xl"></i>
+        </div>
+        <div class="dets text-center">
+          <h3 class="text-md font-semibold mt-2">Slot 1</h3>
+          <h4 class="font-medium text-xs text-green-600 flex justify-center items-center"> <i
+              class="ri-circle-fill text-xs scale-[.5]"></i> Available</h4>
+
+          <button
+            class="bg-yellow-500 hover:bg-yellow-600 mt-2 text-white font-semibold py-2 px-4 rounded-md w-full">Book
+            Now</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  <footer class="bg-[#1792ce] text-white justify-center items-center flex flex-col py-4 gap-2">
+    <h4 class="capitalize font-medium">slots</h4>
+    <h4 class="capitalize font-medium">status</h4>
+    <h4 class="capitalize font-medium">about</h4>
+    <div class="flex items-center justify-center gap-2 mt-2">
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-instagram-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-twitter-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-facebook-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-linkedin-line"></i>
+    </div>
+    <h4>terms & conditions</h4>
+    <p class="mt-2 text-[#08374e]">parkiot 2023 @copyright lorem lorem</p>
+
+
+  </footer>
+  <% include ./partials/footer.ejs %>

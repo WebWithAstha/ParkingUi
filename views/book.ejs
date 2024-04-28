@@ -1,0 +1,86 @@
+<% include ./partials/header.ejs %>
+  
+<div class="w-full bg-zinc-300 p-2 flex items-center ">
+
+  <a href="javascript:history.back()" class="flex items-center font-semibold"><i class="ri-arrow-left-s-line text-2xl mr-2 font-bold"></i>back</a>
+</div>
+<div class="container mx-auto p-4">
+  <!-- Heading of the page -->
+  <h1 class="text-3xl font-bold mb-4">Reservation</h1>
+
+  <!-- Description of the page -->
+  <div class="flex justify-between text-center bg-zinc-700 my-2 text-white p-2">
+      <p><span class="font-semibold">Zone:</span> 1</p>
+      <p><span class="font-semibold">Slot:</span> 1</p>
+  </div>
+
+
+
+  <!-- Details section -->
+  <div class="mb-6  shadow-md p-2">
+      <div>
+          <div class="user flex gap-2 items-center">
+              <div class="img w-12 h-12 rounded-full bg-zinc-700"></div>
+              <h2>John Doe</h2>
+          </div>
+      </div>
+  </div>
+  <div class="mb-6  shadow-md p-2">
+      <h2 class="text-sm font-semibold mb-2">Vehicle Details</h2>
+      <div>
+          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Vehicle name">
+          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Number plate">
+      </div>
+  </div>
+  <div class="mb-6 shadow-md p-2">
+      <h2 class="text-sm font-semibold mb-2">Manage Time</h2>
+      <div class="mb-4 flex items-center gap-2">
+          <label for="duration" class="text-md font-semibold mb-2">Plan:</label>
+          <select id="duration" name="duration" class="w-max p-1 rounded-md outline-none border mb-2">
+            <option value="20">20 min</option>
+            <option value="30">30 min</option>
+            <option value="40">40 min</option>
+            <!-- Add more duration options as needed -->
+          </select>
+        </div>
+      <div class="flex gap-2">
+          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Arrival">
+          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Departure">
+      </div>
+  </div>
+
+  <div class="text-center">
+      <h4>How much?</h4>
+      <h1 class="text-3xl my-2 font-semibold"><s class="opacity-60">$10</s> <span>Free</span> <span class="opacity-60">For</span> <span>20</span>
+          min</h1>
+  </div>
+
+  <button class="w-full mt-10 bg-[#fecb34] p-2 text-xl font-medium rounded-md">Book</button>
+
+
+  <!-- Confirmation message -->
+  <div class="hidden" id="confirmation">
+      <p class="text-lg font-semibold text-green-600">Reservation successful!</p>
+      <!-- Additional confirmation details can be added here -->
+  </div>
+</div>
+  <footer class="bg-[#1792ce] text-white justify-center items-center flex flex-col py-4 gap-2">
+    <h4 class="capitalize font-medium">slots</h4>
+    <h4 class="capitalize font-medium">status</h4>
+    <h4 class="capitalize font-medium">about</h4>
+    <div class="flex items-center justify-center gap-2 mt-2">
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-instagram-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-twitter-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-facebook-line"></i>
+      <i
+        class=" shadow-md border hover:bg-white hover:text-[#1792ce] rounded-md transition-all duration-300 text-2xl px-2 ri-linkedin-line"></i>
+    </div>
+    <h4>terms & conditions</h4>
+    <p class="mt-2 text-[#08374e]">parkiot 2023 @copyright lorem lorem</p>
+
+
+  </footer>
+  <% include ./partials/footer.ejs %>

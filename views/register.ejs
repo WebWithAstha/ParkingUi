@@ -1,0 +1,15 @@
+<% include ./partials/header.ejs %>
+  <div class="w-full h-screen bg--white py-5 flex flex-col items-center justify-center">
+    <div class="flex min-w-72 max-w-96 flex-col items-center px-4">
+        <img class="w-1/2 p-2 rounded-full" src="/images/logo.jpg" alt="">
+        <h1 class="text-2xl font-semibold -mt-5">Let's have an account.</h1>
+        <form class="w-full mt-5 mb-2" action="/register" method="post">
+        <input class="px-3 mt-2 py-2 text-md border-2 border-zinc-500 rounded-md block w-full" type="text" placeholder="username" name="username">
+        <input class="px-3 mt-2 py-2 text-md border-2 border-zinc-500 rounded-md block w-full" type="email" placeholder="email" name="email">
+        <input class="px-3 mt-2 py-2 text-md border-2 border-zinc-500 rounded-md block w-full" type="password" placeholder="password" name="password">
+        <input class="w-full bg-blue-500 px-3 py-3 rounded-md mt-2 text-lg" type="submit" value="Make New Account">
+      </form>
+      <span>Already have an account ? <a href="/login" class="text-blue-500">Log In</a></span>
+    </div>
+  </div>
+<% include ./partials/footer.ejs %>

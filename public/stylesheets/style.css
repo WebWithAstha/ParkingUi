@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+#menubar{
+  z-index: 11;
+  background-color: #fff;
+  position: fixed;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  padding-top: 20vw;
+}
