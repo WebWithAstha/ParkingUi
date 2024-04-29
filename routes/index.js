@@ -56,4 +56,11 @@ function isloggedIn(req,res,next){
   res.redirect('/login')
 }
 
+router.get('/logout', function(req, res, next){
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/login');
+  });
+});
+
 module.exports = router;
