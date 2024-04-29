@@ -18,7 +18,9 @@
           <h4 class="text-2xl">About</h4>
           <a href="/slots"><h4 class="text-2xl">Slots</h4></a>
           <a href="/logout"><h4 class="text-2xl">Logout</h4></a>
-          <a href="/status"><h4 class="text-2xl">Status</h4></a>
+          <%if(loggedUser.status){%>
+            <a href="/status"><h4 class="text-2xl">Status</h4></a>
+          <%}%>
           <a href="/contact"><h4 class="text-2xl">Contact</h4></a>
       </div>
       <div class="nav-bottom">
