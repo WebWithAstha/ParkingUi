@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://0.0.0.0/iotparking')
+mongoose.connect('mongodb+srv://astha:astha123@cluster0.bwmtxj5.mongodb.net/ParkingUi?retryWrites=true&w=majority&appName=Cluster0')
 const plm = require('passport-local-mongoose')
 
 const userSchema = new mongoose.Schema({

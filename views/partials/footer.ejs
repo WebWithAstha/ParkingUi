@@ -11,6 +11,26 @@
       </div>
 <% } %>
 
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with pal",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "be3a3a9f-bee8-4609-b17e-007ff7a19ef3",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "be3a3a9f-bee8-4609-b17e-007ff7a19ef3",
+      "webhookId": "fe9563bd-5ff9-4770-9ce5-9e2141d3d885",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "pal",
+      "avatarUrl": "data:image/png;base64,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",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
 
 </body>
 </html>
