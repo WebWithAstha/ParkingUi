@@ -1,69 +1,75 @@
 <% include ./partials/header.ejs %>
-  
-<div class="w-full bg-zinc-300 p-2 flex items-center ">
 
-  <a href="javascript:history.back()" class="flex items-center font-semibold"><i class="ri-arrow-left-s-line text-2xl mr-2 font-bold"></i>back</a>
-</div>
-<div class="container mx-auto p-4">
-  <!-- Heading of the page -->
-  <h1 class="text-3xl font-bold mb-4">Reservation</h1>
+  <div class="w-full bg-zinc-300 p-2 flex items-center ">
 
-  <!-- Description of the page -->
-  <div class="flex justify-between text-center bg-zinc-700 my-2 text-white p-2">
+    <a href="javascript:history.back()" class="flex items-center font-semibold"><i
+        class="ri-arrow-left-s-line text-2xl mr-2 font-bold"></i>back</a>
+  </div>
+  <div class="container mx-auto p-4">
+    <!-- Heading of the page -->
+    <h1 class="text-3xl font-bold mb-4">Reservation</h1>
+
+    <!-- Description of the page -->
+    <div class="flex justify-between text-center bg-zinc-700 my-2 text-white p-2">
       <p><span class="font-semibold">Zone:</span> 1</p>
       <p><span class="font-semibold">Slot:</span> 1</p>
-  </div>
+    </div>
 
 
 
-  <!-- Details section -->
-  <div class="mb-6  shadow-md p-2">
+    <!-- Details section -->
+    <div class="mb-6  shadow-md p-2">
       <div>
-          <div class="user flex gap-2 items-center">
-              <div class="img w-12 h-12 rounded-full bg-zinc-700"></div>
-              <h2>John Doe</h2>
-          </div>
+        <div class="user flex gap-2 items-center">
+          <div class="img w-12 h-12 rounded-full bg-zinc-700"></div>
+          <h2>John Doe</h2>
+        </div>
       </div>
-  </div>
-  <div class="mb-6  shadow-md p-2">
+    </div>
+    <div class="mb-6  shadow-md p-2">
       <h2 class="text-sm font-semibold mb-2">Vehicle Details</h2>
       <div>
-          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Vehicle name">
-          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Number plate">
+        <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Vehicle name">
+        <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Number plate">
       </div>
-  </div>
-  <div class="mb-6 shadow-md p-2">
+    </div>
+    <div class="mb-6 shadow-md p-2">
       <h2 class="text-sm font-semibold mb-2">Manage Time</h2>
       <div class="mb-4 flex items-center gap-2">
-          <label for="duration" class="text-md font-semibold mb-2">Plan:</label>
-          <select id="duration" name="duration" class="w-max p-1 rounded-md outline-none border mb-2">
-            <option value="20">20 min</option>
-            <option value="30">30 min</option>
-            <option value="40">40 min</option>
-            <!-- Add more duration options as needed -->
-          </select>
-        </div>
-      <div class="flex gap-2">
-          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Arrival">
-          <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Departure">
+        <label for="duration" class="text-md font-semibold mb-2">Plan:</label>
+        <select id="duration" name="duration" class="w-max p-1 rounded-md outline-none border mb-2">
+          <option value="20">20 min</option>
+          <option selected value="30">30 min</option>
+          <option value="40">40 min</option>
+          <!-- Add more duration options as needed -->
+        </select>
       </div>
-  </div>
+      <div class="flex gap-2">
+        <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Arrival">
+        <input class="w-full p-1 rounded-md outline-none border mb-2" type="text" placeholder="Departure">
+      </div>
+      <h2 class="text-sm font-semibold mb-2">Amount(₹)</h2>
 
-  <div class="text-center">
+      <div id="amt" class="w-max p-1 px-2 rounded-md outline-none border mb-2" type="text" placeholder="Departure">50
+    </div>
+    </div>
+
+    <div class="text-center">
       <h4>How much?</h4>
-      <h1 class="text-3xl my-2 font-semibold"><s class="opacity-60">$10</s> <span>Free</span> <span class="opacity-60">For</span> <span>20</span>
-          min</h1>
-  </div>
+      <h1 class="text-3xl my-2 font-semibold"><s class="opacity-60">₹10</s> <span>Free</span> <span
+          class="opacity-60">For</span> <span>20</span>
+        min</h1>
+    </div>
 
-  <button class="w-full mt-10 bg-[#fecb34] p-2 text-xl font-medium rounded-md">Book</button>
+    <button id="rzp-button1" class="w-full mt-10 bg-[#fecb34] p-2 text-xl font-medium rounded-md">Book</button>
 
 
-  <!-- Confirmation message -->
-  <div class="hidden" id="confirmation">
+    <!-- Confirmation message -->
+    <div class="hidden" id="confirmation">
       <p class="text-lg font-semibold text-green-600">Reservation successful!</p>
       <!-- Additional confirmation details can be added here -->
+    </div>
   </div>
-</div>
   <footer class="bg-[#1792ce] text-white justify-center items-center flex flex-col py-4 gap-2">
     <h4 class="capitalize font-medium">slots</h4>
     <h4 class="capitalize font-medium">status</h4>
@@ -83,4 +89,67 @@
 
 
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+
+
+
+let amt = document.querySelector("#amt").textContent
+
+    var orderId;
+    $(document).ready(function () {
+      var settings = {
+        "url": `/bookorder/${1}`,
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+          "amount": `${Number(amt)* 100 }`
+        }),
+      };
+
+      //creates new orderId everytime
+      $.ajax(settings).done(function (response) {
+
+        var options = {
+          "key": "rzp_test_6I6FvnUbmGjI5S", // Enter the Key ID generated from the Dashboard
+          "amount": `${Number(amt)* 100 }`, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          "currency": "INR",
+          "name": "Smart Parking",
+          "description": "Test Transaction",
+          "image": "/images/logo.jpg",
+          "order_id": response.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+          "handler": function (response) {
+            alert("payment successful! Your slot has been booked");
+            window.location.href="/status"
+          },
+          "notes": {
+            "address": "Razorpay Corporate Office"
+          },
+          "theme": {
+            "color": "#3399cc"
+          }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response) {
+          alert(response.error.code);
+          alert(response.error.description);
+          alert(response.error.source);
+          alert(response.error.step);
+          alert(response.error.reason);
+          alert(response.error.metadata.order_id);
+          alert(response.error.metadata.payment_id);
+        });
+        document.getElementById('rzp-button1').onclick = function (e) {
+          rzp1.open();
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+
   <% include ./partials/footer.ejs %>

@@ -17,7 +17,7 @@
   </div>
   <h4 class="text-center text-red-500 font-medium mt-4">Time left</h4>
 
-  <h1 class="text-3xl  font-semibold text-center"><span>19</span>:<span>59</span> min</h1>
+  <h1 id="timer" class="text-3xl  font-semibold text-center"><span id="min">19</span>:<span id="sec">59</span> min</h1>
   <button class="w-full mt-10 bg-[#fecb34] p-2 text-xl font-medium rounded-md">End parking</button>
 </div>
   <footer class="bg-[#1792ce] text-white justify-center items-center flex flex-col py-4 gap-2">
@@ -39,4 +39,26 @@
 
 
   </footer>
+  <script>
+    let time=59
+    let mindiv = document.querySelector('#min')
+    let min= mindiv.textContent
+    let interval  = setInterval(() => {
+      if(time>-1){
+
+        if(time===1){
+          min = mindiv.textContent
+        }
+        document.querySelector('#sec').textContent=time
+        time--;
+      }else{
+        
+        mindiv.textContent = parseInt(min)-1
+        time=59
+        
+      }
+
+      
+    }, 100);
+  </script>
   <% include ./partials/footer.ejs %>
