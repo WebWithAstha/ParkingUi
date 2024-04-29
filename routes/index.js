@@ -20,7 +20,7 @@ router.get('/status', function(req, res, next) {
   res.render('status', { footer:false });
 });
 router.get('/book/slot/:zone/:slot', function(req, res, next) {
-  res.render('book', { footer:false });
+  res.render('book', { footer:false,slot:req.params.slot,zone:req.params.zone });
 });
 router.get('/slots', function(req, res, next) {
   res.render('slots', { footer:false });
