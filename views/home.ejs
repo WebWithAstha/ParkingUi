@@ -3,10 +3,11 @@
 
 
   <nav class="flex relative justify-between items-center p-4 md:px-16 border-b">
-    <div class="logo">
-      <!-- <img src="/images/logo.jpg" class="w-10 object-cover" alt=""> -->
-      <p class="leading-tight text-xs italic text-blue-500 font-bold">Smart Parking</p>
-    </div>
+    <a href="/home">
+      <div class="logo">
+        <p class="leading-tight text-xs italic text-blue-500 font-bold">Smart Parking</p>
+      </div>
+    </a>
     <i class="menuu ri-menu-line font-bold text-xl"></i>
 
     
@@ -23,6 +24,9 @@
           <a href="/logout"><h4 class="text-2xl">Logout</h4></a>
           <%if(loggedUser.status){%>
             <a href="/status"><h4 class="text-2xl">Status</h4></a>
+          <%}%>
+          <%if(loggedUser.acctype === "admin"){%>
+            <a href="/admin"><h4 class="text-2xl">Admin</h4></a>
           <%}%>
           <a href="/contact"><h4 class="text-2xl">Contact</h4></a>
       </div>
@@ -147,6 +151,9 @@
   </footer>
 
 
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/be3a3a9f-bee8-4609-b17e-007ff7a19ef3/webchat/config.js" defer></script>
+  
   <script>
 
 

@@ -26,6 +26,10 @@ router.get('/book/slot/:zone/:slot',isloggedIn,async function(req, res, next) {
   const loggedUser = await userModel.findOne({username:req.session.passport.user.username})
   res.render('book', { footer:false,slot:req.params.slot,zone:req.params.zone,loggedUser });
 });
+router.get('/admin',isloggedIn,async function(req, res, next) {
+  const loggedUser = await userModel.findOne({username:req.session.passport.user.username})
+  res.render('admin', { footer:false,loggedUser });
+});
 router.get('/slots',isloggedIn, function(req, res, next) {
   res.render('slots', { footer:false });
 });
